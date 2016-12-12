@@ -1,0 +1,7 @@
+language: go
+
+go:
+  - 1.8beta1
+  - 1.7.x
+
+sudo: false
