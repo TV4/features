@@ -11,6 +11,10 @@ type Features interface {
 
 // New creates new Features
 func New(data map[string]bool) Features {
+	if data == nil {
+		return &features{data: map[string]bool{}}
+	}
+
 	return &features{data: data}
 }
 
