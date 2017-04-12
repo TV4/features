@@ -6,19 +6,19 @@ func TestNew(t *testing.T) {
 	t.Run("nil", func(t *testing.T) {
 		f := New(nil)
 
-		if f.Enabled("foo") == true {
+		if f.Enabled("foo") {
 			t.Fatalf(`f.Enabled("foo") == true, want false`)
 		}
 
 		f.Enable("foo")
 
-		if f.Enabled("foo") == false {
+		if !f.Enabled("foo") {
 			t.Fatalf(`f.Enabled("foo") == false, want true`)
 		}
 
 		f.Disable("foo")
 
-		if f.Enabled("foo") == true {
+		if f.Enabled("foo") {
 			t.Fatalf(`f.Enabled("foo") == true, want false`)
 		}
 	})
@@ -29,27 +29,27 @@ func TestNew(t *testing.T) {
 			"bar": false,
 		})
 
-		if f.Enabled("foo") == false {
+		if !f.Enabled("foo") {
 			t.Fatalf(`f.Enabled("foo") == false, want true`)
 		}
 
-		if f.Enabled("bar") == true {
+		if f.Enabled("bar") {
 			t.Fatalf(`f.Enabled("bar") == true, want false`)
 		}
 
-		if f.Enabled("baz") == true {
+		if f.Enabled("baz") {
 			t.Fatalf(`f.Enabled("baz") == true, want false`)
 		}
 
 		f.Enable("baz")
 
-		if f.Enabled("baz") == false {
+		if !f.Enabled("baz") {
 			t.Fatalf(`f.Enabled("baz") == false, want true`)
 		}
 
 		f.Disable("baz")
 
-		if f.Enabled("baz") == true {
+		if f.Enabled("baz") {
 			t.Fatalf(`f.Enabled("baz") == true, want false`)
 		}
 	})
