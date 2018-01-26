@@ -12,7 +12,7 @@ The features package provides a simple feature flagging interface/implementation
 
 ## License (MIT)
 
-Copyright (c) 2016 TV4
+Copyright (c) 2016-2018 TV4
 
 > Permission is hereby granted, free of charge, to any person obtaining
 > a copy of this software and associated documentation files (the
