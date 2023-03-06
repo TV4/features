@@ -1,3 +1,5 @@
+**Deprecated; this package is no longer maintained.**
+
 # features
 
 [![Build Status](https://travis-ci.org/TV4/features.svg?branch=master)](https://travis-ci.org/TV4/features)

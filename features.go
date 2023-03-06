@@ -1,3 +1,4 @@
+// Deprecated: This package is no longer maintained.
 package features
 
 import "sync"
